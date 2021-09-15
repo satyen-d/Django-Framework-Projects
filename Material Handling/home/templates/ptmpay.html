@@ -1,0 +1,62 @@
+{% extends 'materialbase.html' %}
+
+{% block title %}
+Material Handling | Shop
+{% endblock title %}
+
+{% block body %}
+
+
+<div class="container-fluid py-4 px-4" style="background-color: #edf6f9">
+  <div class="container py-4 px-4"
+    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #ffffff">
+    <form id="contact-form" name="contact-form" action="/Order" method="POST">
+    {% csrf_token %}
+    <div class="row py-2">
+      <div class="col-md-6">
+        <div class="md-form mb-0">
+          <label for="name" class="">Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name here.." required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="md-form mb-0">
+          <label for="name" class="">Email</label>
+          <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email here.." required>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+            <div class="col-md-6 py-2">
+        <div class="md-form mb-0">
+          <label for="name" class="">Phone Number</label>
+          <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter shop phone number.." required>
+        </div>
+      </div>
+                  <div class="col-md-6 py-2">
+        <div class="md-form mb-0">
+          <label for="name" class="">City & Pin Code</label>
+          <input type="text" id="city" name="city" class="form-control" placeholder="Enter your city here.." required>
+        </div>
+      </div>
+      </div>
+      <div class="form-group py-2">
+        <label for="exampleFormControlInput1">Address line 1</label>
+        <input type="text" class="form-control" id="add1" name="add1" placeholder="Enter house no. & street " required>
+      </div>
+      <div class="col-md-12 py-2">
+        <div class="md-form mb-0">
+          <label for="name" class="">Address line 2</label>
+          <input type="text" id="add2" name="add2" class="form-control" placeholder="Enter colony & area" required>
+        </div>
+      </div>
+    </form>
+                <div class="text-center d-grid gap-2 mt-2 text-md-left">
+                <a class="btn btn-primary btn-block" onclick="document.getElementById('contact-form').submit();">Order</a>
+            </div>
+            <div class="status"></div>
+        </div>
+  </div>
+</div>
+
+{% endblock body %}

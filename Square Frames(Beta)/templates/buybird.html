@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %} Square Frames | Place order
+{% endblock title %}
+
+{% block body %} 
+<!--FBEEC1  5D5C61-->
+<div class="jumbotron jumbotron-fluid"style="background-color:#557A95; color:#fff">
+  <div class="container" >
+    <h1 class="display-4"><br>Processing to place order at Square Frames</h1>
+    <p class="lead">Photo will be delivered on email id so enter all the below details correctly <br>For help call on 7875728590</p>
+  </div>
+</div>
+
+ <h2 class="h1-responsive font-weight- regular text-center my-4" style="font-family: 'Josenfin Sans', light 300 !important">Please fill following details</h2>
+<div class="container py-5 px-5" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+<form id='contact-form' action='/order' method='POST'>
+{% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="text">First Name</label>
+      <input type="text" class="form-control" name="FirstName" id="inputEmail4">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Last Name</label>
+      <input type="text" class="form-control" name="LastName" id="inputPassword4">
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" name="Email" id="inputEmail4">
+    </div>
+     <div class="form-group col-md-6">
+      <label for="inputPassword4">Phone Number</label>
+      <input type="tel" class="form-control" name="PhoneNumber" id="inputPassword4">
+    </div>
+    </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" name="Address" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+      <label for="inputCity">Country</label>
+      <input type="text" class="form-control" name="Country" id="inputCity">
+    </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" name="City" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <input type="text" class="form-control" name="State" id="inputState">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" name="Zip" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group col-md-2">
+      <label for="inputZip">Photo ID</label>
+      <input type="number" class="form-control" name="PhotoID" id="inputZip">
+    </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        High Priority
+      </label>
+    </div>
+  </div>
+  <div>
+  <a href="order" onclick="document.getElementById('contact-form').submit();"><button type="submit" class="btn btn-primary btn-block">Place order</button></a>
+</div>
+
+</form>
+
+</div>
+{% endblock body %}
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Josenfin Sans">
+          

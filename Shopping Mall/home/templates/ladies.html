@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} Shopping Mall | Photos
+{% endblock title %}
+
+
+{% block body %} 
+
+<div class ="container-fluid px-0 mt-1 fm">
+<div class="imp">
+<img src="static/photo-1512436991641-6745cdb1723f.jpg" class="d-block w-100 mx-0 " height="400px" alt=" " name="up">
+</div>
+</div>
+
+<div class="container py-5 px-5  fm">
+<h1 class="text-center">Wellcome shopping at Shopping Mall<br></h1>
+<h6 class="text-center">Fill the below details as per your need. Photos and price of the product will be sent to you on whatsapp<br><br></h6>
+<form id='contact-form' action='/ladies' method='POST'>
+{% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Name</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="full name" name="name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Phone Number</label>
+      <input type="number" class="form-control" id="inputPassword4" placeholder="" name="phonenumber">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Style</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="e.g- Shirt, geans, top" name="style">
+  </div>
+ 
+    <div class="form-group col-md-6">
+      <label for="inputCity">Size</label>
+      <input type="text" class="form-control" id="inputCity" placeholder="e.g- L, M, S or 35, 32 or freestyle"  name="size">
+    </div>
+   
+    <div class="form-group col-md-8">
+      <label for="inputZip">Description(optional)</label>
+      <input type="text" class="form-control" id="inputZip" name="description">
+    </div>
+<a href="/order" onclick="document.getElementById('contact-form').submit();"><button type="submit" class="btn btn-primary btn-block">Check photos</button></a>
+  
+  </div>
+  
+</form>
+</div>
+
+{% endblock body %}
+

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock title %}
+
+{% block body %}
+
+
+<div class="jumbotron jumbotron-fluid py-4 px-4" style="background-color: #edf6f9">
+  <div class="container">
+    <h1 class="display-4">Register Your transport service Here</h1>
+    <p class="lead">Enter below details correctly.</p>
+  </div>
+</div>
+
+<div class="container-fluid py-4 px-4" style="background-color: #edf6f9">
+  <div class="container py-4 px-4"
+    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #ffffff">
+    <form id="contact-form" name="contact-form" action="/transrg" method="POST">
+      {% csrf_token %}
+      <div class="row py-2">
+        <div class="col-md-6">
+          <div class="md-form mb-0">
+            <label for="name" class="">Name of your Transport Service</label>
+            <input type="text" id="name" name="name" class="form-control"
+              placeholder="Enter name of transport service here.." required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="md-form mb-0">
+            <label for="sname" class="">Name of your Service Incharge</label>
+            <input type="text" id="sname" name="sname" class="form-control"
+              placeholder="Enter name of service incharge here.." required>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 py-2">
+        <div class="md-form mb-0">
+          <label for="phone" class="">Service Incharge's Phone Number</label>
+          <input type="text" id="phone" name="phone" class="form-control"
+            placeholder="Enter service incharge's phone number.." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group py-2">
+          <label for="exampleFormControlInput1">Email Address for your Transport Service</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="col-md-6 py-2">
+          <div class="md-form mb-0">
+            <label for="city" class="">City</label>
+            <input type="text" id="city" name="city" class="form-control" placeholder="Enter your city.." required>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 py-2">
+        <div class="md-form mb-0">
+          <label for="name" class="">Details of your Transport Service</label>
+          <input type="text" id="transport_details" name="transport_details" class="form-control"
+            placeholder="Enter specialities and offers of your service here.." required>
+        </div>
+      </div>
+    </form>
+    <div class="text-center d-grid gap-2 mt-2 text-md-left">
+      <a class="btn btn-primary btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
+    </div>
+    <div class="status"></div>
+  </div>
+</div>
+</div>
+
+{% endblock body %}

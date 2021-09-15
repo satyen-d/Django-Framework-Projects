@@ -1,0 +1,59 @@
+.nav-item:hover{
+    background-color: white;
+    border-radius: 4px;
+}
+
+.font{
+    color: #f48c06;
+    font-family: 'Raleway', sans-serif;
+}
+
+.font1{
+    color: #333533;
+
+}
+
+.dietbg{
+    background-color: #f6fff8;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #403d39;
+
+}
+
+.diet{
+    background-color: teal;
+    color: white;
+}
+
+.cardback{
+    background-color: #b7e4c7;
+}
+
+.fs{
+    font-weight: 500;
+    font-size: large;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+.bac{
+    background-color: #fcd5ce;
+}
+
+.cards{
+    background-color: teal;
+}
+
+.carousel-caption{
+    background-color:black;
+    opacity: 0.6;
+
+}
+
+.carousel-caption:hover{
+    opacity: 1.0;
+    border-radius: 4px;
+
+}
+

@@ -1,0 +1,36 @@
+{% extends 'paytrans.html' %}
+
+{% block body %}
+
+
+<div class="container">
+<table class="table table-hover text-center py-4 px-4">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">Transporter's Name</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">City</th>
+      <th scope="col">Email ID</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for st in stu%}
+    <tr>
+      <th scope="row">{{st.id}}</th>
+      <td><a href="transport">{{st.name}}</a></td>
+      <td>{{st.sname}}</td>
+      <td>{{st.phone}}</td>
+      <td>{{st.city}}</td>
+      <td>{{st.email}}</td>
+      <td>{{st.shop_details}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+{% endblock body %}
